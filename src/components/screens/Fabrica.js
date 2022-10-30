@@ -7,6 +7,7 @@ import Details from './details';
 const Fabrica = (props) =>  {
     var botonId=props.a
     var btn=0;
+    var menor=props.a-2
     const [pokemones, setPokemones] = useState([]);
     useEffect(() => {
         const obtenerPokemones = async () => {
@@ -52,7 +53,10 @@ const Fabrica = (props) =>  {
                         </a>
                     </div>
                     <br />
-                    <Details Id={4}/>
+                    <div>
+                        <Details Id={props.a} titulo={props.titulo}/>
+            
+        </div>
                 </div>
             </div>
         </div>
