@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Pantallaso from '../../components/screens/pantallaso';
+
 import Details2 from '../../components/screens/details2';
-function barra() {
+
+function Barra() {
+  const [nombre, setNombre]=useState("");
   var resp;
   const handleChange=e=>{
     resp=e.target.value
     console.log(e.target.value)
+    setNombre((e.target.value).toLowerCase())
   }
 
   return (
@@ -34,8 +37,7 @@ function barra() {
               aria-label="Search"
               onChange={handleChange}
             />
-    <       Details2 nombre={resp}/>
-
+    <      Details2 nombre={nombre}/>
           </Form>
         </Navbar.Collapse>
       </Container>
@@ -43,4 +45,4 @@ function barra() {
   )
 }
 
-export default barra
+export default Barra

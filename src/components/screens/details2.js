@@ -15,7 +15,7 @@ const Details = (props) => {
 
     return (
         <div>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#segundo">
                 Buscar
 
             </button>
